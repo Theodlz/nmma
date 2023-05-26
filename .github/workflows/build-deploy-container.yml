@@ -34,7 +34,7 @@ jobs:
 
       - name: Build and push Linux amd64 image
         if: matrix.test_subset == 'linux/amd64'
-        id: docker_build
+        id: docker_build_amd64
         uses: docker/build-push-action@v2
         with:
           context: ./
@@ -45,7 +45,7 @@ jobs:
 
       - name: Build and push Linux arm64 image
         if: matrix.test_subset == 'linux/arm64'
-        id: docker_build
+        id: docker_build_arm64
         uses: docker/build-push-action@v2
         with:
           context: ./
