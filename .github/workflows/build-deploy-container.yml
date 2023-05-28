@@ -43,6 +43,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
+          file: ./api/Dockerfile
           platforms: ${{ matrix.platform }}
           labels: ${{ steps.meta.outputs.labels }}
           outputs: type=image,name=nmma_api,push-by-digest=true,name-canonical=true,push=true
