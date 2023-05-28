@@ -45,7 +45,6 @@ jobs:
           context: .
           file: ./api/Dockerfile
           platforms: ${{ matrix.platform }}
-          labels: ${{ steps.meta.outputs.labels }}
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/nmma_api:latest
 
       - name: Export digest
