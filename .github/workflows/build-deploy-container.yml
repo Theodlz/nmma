@@ -45,7 +45,7 @@ jobs:
           context: .
           platforms: ${{ matrix.platform }}
           labels: ${{ steps.meta.outputs.labels }}
-          outputs: type=image,name=nmma_api,push-by-digest=true,name-canonical=true,push=true
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/nmma_api:latest
 
       - name: Export digest
         run: |
