@@ -4,7 +4,7 @@ on:
   push:
 
 env:
-  REGISTRY_IMAGE: nmma/nmma_api:latest
+  REGISTRY_IMAGE: nmma/nmma_api
 
 jobs:
   build:
